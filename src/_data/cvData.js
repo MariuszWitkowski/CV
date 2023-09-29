@@ -1,7 +1,7 @@
 module.exports = {
-  name: 'Your Name',
-  email: 'your@email.com',
-  phone: '123-456-7890',
+  name: 'Mariusz Witkowski',
+  email: 'mar.wit49@gmail.com',
+  phone: '+48 609 289 604',
   objective:
     'Results-driven senior front-end developer with 9 years of experience...',
   qualifications: [
