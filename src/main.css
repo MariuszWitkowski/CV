@@ -1,0 +1,12 @@
+dt {
+  display: inline;
+}
+
+dd {
+  display: inline;
+  margin-left: 0.25rem;
+}
+
+a {
+  color: #004ecd;
+}

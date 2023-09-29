@@ -1,48 +1,69 @@
 <main>
   <h1>{{ cvData.name }}</h1>
   <dl>
-    <dt>Email:
+    <dt>Email:</dt>
+    <dd>
       <a href="mailto:{{ cvData.email }}">{{ cvData.email }}</a>
-    </dt>
-    <dt>Phone:
-      <a href="tel:{{ cvData.phone }}">{{ cvData.phone }}</a>
-    </dt>
-    <dt>Github:
-      <a href="{{ cvData.github }}">{{ cvData.github }}</a>
-    </dt>
-    <dt>LinkedIn:
-      <a href="{{ cvData.linkedin }}">{{ cvData.linkedin }}</a>
-    </dt>
+    </dd>
+    <div>
+      <dt>Phone:</dt>
+      <dd>
+        <a href="tel:{{ cvData.phone }}">{{ cvData.phone }}</a>
+      </dd>
+    </div>
+    <div>
+      <dt>Github:</dt>
+      <dd>
+        <a href="{{ cvData.github }}">{{ cvData.github }}</a>
+      </dd>
+    </div>
+    <div>
+      <dt>LinkedIn:</dt>
+      <dd>
+        <a href="{{ cvData.linkedin }}">{{ cvData.linkedin }}</a>
+      </dd>
+    </div>
+    <div>
+      <dt>CV page:</dt>
+      <dd>
+        <a href="{{ cvData.cvPage }}">{{ cvData.cvPage }}</a>
+      </dd>
+    </div>
   </dl>
-  <h3>Objective:</h3>
+  <h2>Objective:</h2>
   <p>{{ cvData.objective }}</p>
-  <h3>Summary of Qualifications:</h3>
+  <blockquote>
+    <p>{{ cvData.explanation }}</p>
+    </blockquote>
+  <h2>Summary of Qualifications:</h2>
   <ul>
     {% for qualification in cvData.qualifications %}
       <li>{{ qualification }}</li>
     {% endfor %}
   </ul>
-  <h3>Professional Experience:</h3>
+  <h2>Professional Experience:</h2>
   {% for job in cvData.experience %}
-    <h4>{{ job.title }}<br>
-        <small>{{ job.company }}, {{ job.location }}, {{ job.dates }}</small>
-      </h4>
-      <ul>
-        {% for responsibility in job.responsibilities %}
-          <li>{{ responsibility }}</li>
-        {% endfor %}
-      </ul>
-    {% endfor %}
-    <h3>Education:</h3>
-    <p>{{ cvData.education.degree }}, {{ cvData.education.fieldOfStudy }}, {{ cvData.education.university }},
-    {{ cvData.education.graduationDate }}</p>
-    <h3>Skills:</h3>
+    <h3>{{ job.title }}<br>
+      <small>{{ job.company }}, {{ job.dates }}</small>
+    </h3>
     <ul>
-      {% for skill in cvData.skills %}
-        <li>{{ skill }}</li>
+      {% for responsibility in job.responsibilities %}
+        <li>{{ responsibility }}</li>
       {% endfor %}
     </ul>
-    <br>
-      <blockquote>Available from November 1.</blockquote>
-      {# <p>Available upon request.</p> #}
-    </main>
+  {% endfor %}
+  <h2>Education:</h2>
+  <p>{{ cvData.education.degree }}, {{ cvData.education.fieldOfStudy }}, {{ cvData.education.university }},
+  {{ cvData.education.graduationDate }}</p>
+  <h2>Languages:</h2>
+  <ul>
+    <li>Polish: Native</li>
+    <li>English: Intermediate, B2</li>
+  </ul>
+  <h2>Skills:</h2>
+  <ul>
+    {% for skill in cvData.skills %}
+      <li>{{ skill }}</li>
+    {% endfor %}
+  </ul>
+</main>
