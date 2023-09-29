@@ -64,7 +64,7 @@ module.exports = {
   skills: [
     'Programming Languages: TypeScript/JavaScript, HTML, CSS, Python, Rust',
     'Frontend Frameworks: React, Vue.js, Angular.js, Angular, Svelte, Astro, 11ty',
-    'Fullstack: Node.js, Next.js, Express.js, Nest.js',
+    'Fullstack: Node.js, Next.js, Express.js, Nest.js, Strapi',
     'Mobile: React Native, Flutter',
     'Testing: Jest, React Testing Library, Cypress, Playwright, Puppeteer',
     'Version Control: Git, Github, Gitlab, Bitbucket',

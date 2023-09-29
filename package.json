@@ -9,6 +9,6 @@
   },
   "scripts": {
     "build": "bunx @11ty/eleventy",
-    "dev": "bunx http-server output"
+    "dev": "bunx @11ty/eleventy --serve"
   }
 }
