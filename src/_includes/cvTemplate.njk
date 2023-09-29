@@ -2,6 +2,8 @@
   <h1>{{ cvData.name }}</h1>
   <p>Email: <a href="mailto:{{cvData.email}}">{{ cvData.email }}</a></p>
   <p>Phone: <a href="tel:{{cvData.phone}}">{{ cvData.phone }}</a></p>
+  <p>Github: <a href="{{cvData.github}}">{{ cvData.github }}</a></p>
+  <p>LinkedIn: <a href="{{cvData.linkedin}}">{{ cvData.linkedin }}</a></p>
   <h2>Objective:</h2>
   <p>{{ cvData.objective }}</p>
   <h2>Summary of Qualifications:</h2>
@@ -20,7 +22,7 @@
     </ul>
   {% endfor %}
   <h2>Education:</h2>
-  <p>{{ cvData.education.degree }}, {{ cvData.education.university }}, {{ cvData.education.graduationDate }}</p>
+  <p>{{ cvData.education.degree }}, {{ cvData.education.fieldOfStudy }}, {{ cvData.education.university }}, {{ cvData.education.graduationDate }}</p>
   <h2>Skills:</h2>
   <ul>
     {% for skill in cvData.skills %}
@@ -34,5 +36,6 @@
     {% endfor %}
   </ul>
   <h2>References:</h2>
-  <p>Available upon request.</p>
+  <p>Available from November 1.</p>
+  {# <p>Available upon request.</p> #}
 </main>
