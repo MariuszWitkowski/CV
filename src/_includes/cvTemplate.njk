@@ -1,0 +1,43 @@
+<h1>{{ cvData.name }}</h1>
+<p>Email: {{ cvData.email }}</p>
+<p>Phone: {{ cvData.phone }}</p>
+
+<h2>Objective:</h2>
+<p>{{ cvData.objective }}</p>
+
+<h2>Summary of Qualifications:</h2>
+<ul>
+  {% for qualification in cvData.qualifications %}
+    <li>{{ qualification }}</li>
+  {% endfor %}
+</ul>
+
+<h2>Professional Experience:</h2>
+{% for job in cvData.experience %}
+  <h3>{{ job.title }}, {{ job.company }}, {{ job.location }}, {{ job.dates }}</h3>
+  <ul>
+    {% for responsibility in job.responsibilities %}
+      <li>{{ responsibility }}</li>
+    {% endfor %}
+  </ul>
+{% endfor %}
+
+<h2>Education:</h2>
+<p>{{ cvData.education.degree }}, {{ cvData.education.university }}, {{ cvData.education.graduationDate }}</p>
+
+<h2>Skills:</h2>
+<ul>
+  {% for skill in cvData.skills %}
+    <li>{{ skill }}</li>
+  {% endfor %}
+</ul>
+
+<h2>Certifications:</h2>
+<ul>
+  {% for certification in cvData.certifications %}
+    <li>{{ certification }}</li>
+  {% endfor %}
+</ul>
+
+<h2>References:</h2>
+<p>Available upon request.</p>

@@ -1,0 +1,13 @@
+{
+  "author": {
+    "name": "Mariusz Witkowski"
+  },
+  "dependencies": {
+    "html-minifier": "^4.0.0",
+    "marx-css": "^4.0.1"
+  },
+  "scripts": {
+    "build": "bunx @11ty/eleventy",
+    "dev": "bunx http-server output"
+  }
+}
