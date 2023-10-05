@@ -1,71 +1,74 @@
-<main>
-  <h1>{{ cvData.name }}</h1>
-  <dl>
-    <div>
-    <dt>Email:</dt>
-    <dd>
-      <a href="mailto:{{ cvData.email }}">{{ cvData.email }}</a>
-    </dd>
-    </div>
-    <div>
-      <dt>Phone:</dt>
-      <dd>
-        <a href="tel:{{ cvData.phone }}">{{ cvData.phone }}</a>
-      </dd>
-    </div>
-    <div>
-      <dt>Github:</dt>
-      <dd>
-        <a href="{{ cvData.github }}">{{ cvData.github }}</a>
-      </dd>
-    </div>
-    <div>
-      <dt>LinkedIn:</dt>
-      <dd>
-        <a href="{{ cvData.linkedin }}">{{ cvData.linkedin }}</a>
-      </dd>
-    </div>
-    <div>
-      <dt>CV page:</dt>
-      <dd>
-        <a href="{{ cvData.cvPage }}">{{ cvData.cvPage }}</a>
-      </dd>
-    </div>
-  </dl>
-  <h2>Objective:</h2>
-  <p>{{ cvData.objective }}</p>
-  <blockquote>
-    <p>{{ cvData.explanation }}</p>
-    </blockquote>
-  <h2>Summary of Qualifications:</h2>
-  <ul>
-    {% for qualification in cvData.qualifications %}
-      <li>{{ qualification }}</li>
-    {% endfor %}
-  </ul>
-  <h2>Professional Experience:</h2>
-  {% for job in cvData.experience %}
-    <h3>{{ job.title }}<br>
-      <small>{{ job.company }}, {{ job.dates }}</small>
-    </h3>
-    <ul>
-      {% for responsibility in job.responsibilities %}
-        <li>{{ responsibility }}</li>
+<header class="bg-blue-500 py-4 text-white text-center">
+  <h1 class="text-3xl font-semibold">{{ cvData.name }}</h1>
+  <p>Senior Frontend Developer</p>
+</header>
+<main class="container mx-auto p-4 mt-8 flex text-gray-900">
+  <aside class="w-1/3">
+    <section class="bg-white p-4 shadow-md">
+      <h2 class="text-lg text-blue-600 font-semibold mb-2">Details</h2>
+      {% for detail in cvData.details %}
+        <div class="mt-2 first:mt-0">
+          <div class="capitalize text-sm">{{ detail.field }}</div>
+          <div class="text-xs break-words">
+            <a href="{{ detail.href or detail.value }}">{{ detail.value }}</a>
+          </div>
+        </div>
       {% endfor %}
-    </ul>
-  {% endfor %}
-  <h2>Education:</h2>
-  <p>{{ cvData.education.degree }}, {{ cvData.education.fieldOfStudy }}, {{ cvData.education.university }},
-  {{ cvData.education.graduationDate }}</p>
-  <h2>Languages:</h2>
-  <ul>
-    <li>Polish: Native</li>
-    <li>English: Intermediate, B2</li>
-  </ul>
-  <h2>Skills:</h2>
-  <ul>
-    {% for skill in cvData.skills %}
-      <li>{{ skill }}</li>
-    {% endfor %}
-  </ul>
+      <h2 class="text-lg text-blue-600 font-semibold mt-4 mb-2">Core skills</h2>
+      <ul>
+        {% for coreSkill in cvData.coreSkills %}
+          <li class="text-sm">{{ coreSkill }}</li>
+        {% endfor %}
+        <li class="text-xs text-gray-600">more below</li>
+      </ul>
+      <h2 class="text-lg text-blue-600 font-semibold mt-4 mb-2">Languages:</h2>
+      <ul class="text-sm">
+        <li>Polish: Native</li>
+        <li>English: Intermediate</li>
+      </ul>
+      <h2 class="text-lg text-blue-600 font-semibold mt-4 mb-2">Education:</h2>
+      <p class="text-sm">{{ cvData.education.degree }}, {{ cvData.education.fieldOfStudy }},
+        {{ cvData.education.university }}, {{ cvData.education.graduationDate }}</p>
+    </section>
+    <section class="bg-white p-4 mt-4 shadow-md">
+      <h2 class="text-lg text-blue-600 font-semibold mb-4">Skills</h2>
+      <ul>
+        {% for skill in cvData.skills %}
+          <li class="mt-2 first:mt-0">
+            <div class="text-sm">{{ skill.label }}</div>
+            <div class="text-sm text-gray-600">{{ skill.values | join(", ") }}</div>
+          </li>
+        {% endfor %}
+      </ul>
+    </section>
+  </aside>
+  <article class="w-2/3 ml-4">
+    <section class="bg-white p-4 shadow-md">
+      <h2 class="text-lg text-blue-600 font-semibold mb-4">Objective</h2>
+      <p class="text-sm">{{ cvData.objective }}</p>
+    </section>
+    <section class="bg-white p-4 mt-4 shadow-md">
+      <h2 class="text-lg text-blue-600 font-semibold mb-4">Summary of Qualifications</h2>
+      <ul class="list-disc ml-4 text-sm">
+        {% for qualification in cvData.qualifications %}
+          <li>{{ qualification }}</li>
+        {% endfor %}
+      </ul>
+    </section>
+    <section class="bg-white p-4 mt-4 shadow-md">
+      <h2 class="text-lg text-blue-600 font-semibold mb-4">Professional Experience</h2>
+      {% for job in cvData.experience %}
+        <div class="mb-4">
+          <h3 class="text-xl font-semibold">{{ job.title }}</h3>
+          <p class="text-gray-600 italic">{{ job.company }} - {{ job.dates }}</p>
+          <p>{{ job.description }}</p>
+          <ul class="list-disc ml-4 text-sm">
+            {% for responsibility in job.responsibilities %}
+              <li>{{ responsibility }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      {% endfor %}
+    </section>
+  </article>
 </main>

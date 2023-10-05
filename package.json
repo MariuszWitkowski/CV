@@ -1,14 +1,28 @@
 {
+  "name": "cv",
+  "version": "2.0.0",
+  "description": "CV Resume for Mariusz Witkowski",
   "author": {
-    "name": "Mariusz Witkowski"
+    "name": "Mariusz Witkowski",
+    "email": "mar.wit49@gmail.com",
+    "url": "https://mariuszwitkowski.github.io/CV/"
   },
+  "license": "MIT",
   "homepage": "https://mariuszwitkowski.github.io/CV/",
   "dependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "autoprefixer": "^10.4.16",
     "html-minifier": "^4.0.0",
-    "marx-css": "^4.0.1"
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.3.3"
   },
   "scripts": {
-    "build": "bunx @11ty/eleventy",
-    "dev": "bunx @11ty/eleventy --serve"
+    "start": "bunx npm-run-all -p dev:*",
+    "build": "bunx run-s build:*",
+    "dev:11ty": "bunx @11ty/eleventy --serve",
+    "dev:css": "bunx tailwindcss -i src/assets/css/tailwind.css -o docs/assets/css/tailwind.css --watch --postcss",
+    "build:11ty": "bunx @11ty/eleventy",
+    "build:css": "bunx tailwindcss -i src/assets/css/tailwind.css -o docs/assets/css/tailwind.css --postcss"
   }
 }
