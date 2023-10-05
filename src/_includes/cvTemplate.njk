@@ -2,13 +2,13 @@
   <h1 class="text-3xl font-semibold">{{ cvData.name }}</h1>
   <p>Senior Frontend Developer</p>
 </header>
-<main class="mx-auto p-4 mt-8 flex flex-col text-gray-900 md:container md:flex-row">
+<main class="mx-auto p-4 mt-8 flex flex-col text-sm text-gray-900 md:container md:flex-row">
   <aside class="md:w-1/3">
     <section class="bg-white p-4 shadow-md">
       <h2 class="text-lg text-blue-600 font-semibold mb-2">Details</h2>
       {% for detail in cvData.details %}
         <div class="mt-2 first:mt-0">
-          <div class="capitalize text-sm">{{ detail.field }}</div>
+          <div class="capitalize">{{ detail.field }}</div>
           <div class="text-xs break-words">
             <a href="{{ detail.href or detail.value }}">{{ detail.value }}</a>
           </div>
@@ -17,26 +17,27 @@
       <h2 class="text-lg text-blue-600 font-semibold mt-4 mb-2">Core skills</h2>
       <ul>
         {% for coreSkill in cvData.coreSkills %}
-          <li class="text-sm">{{ coreSkill }}</li>
+          <li>{{ coreSkill }}</li>
         {% endfor %}
         <li class="text-xs text-gray-600 italic">more below</li>
       </ul>
       <h2 class="text-lg text-blue-600 font-semibold mt-4 mb-2">Languages:</h2>
-      <ul class="text-sm">
+      <ul>
         <li>Polish: Native</li>
         <li>English: Intermediate</li>
       </ul>
       <h2 class="text-lg text-blue-600 font-semibold mt-4 mb-2">Education:</h2>
-      <p class="text-sm">{{ cvData.education.degree }}, {{ cvData.education.fieldOfStudy }},
-        {{ cvData.education.university }}, {{ cvData.education.graduationDate }}</p>
+      <p>{{ cvData.education.university }}</p>
+      <p>{{ cvData.education.degree }}, {{ cvData.education.fieldOfStudy }},
+      {{ cvData.education.graduationDate }}</p>
     </section>
     <section class="bg-white p-4 mt-4 shadow-md">
       <h2 class="text-lg text-blue-600 font-semibold mb-4">Skills</h2>
       <ul>
         {% for skill in cvData.skills %}
           <li class="mt-2 first:mt-0">
-            <div class="text-sm">{{ skill.label }}</div>
-            <div class="text-sm text-gray-600">{{ skill.values | join(", ") }}</div>
+            <div>{{ skill.label }}</div>
+            <div class=" text-gray-600">{{ skill.values | join(", ") }}</div>
           </li>
         {% endfor %}
       </ul>
@@ -46,11 +47,11 @@
   <article class="mt-4 md:w-2/3 md:mt-0 md:ml-4">
     <section class="bg-white p-4 shadow-md">
       <h2 class="text-lg text-blue-600 font-semibold mb-4">Objective</h2>
-      <p class="text-sm">{{ cvData.objective }}</p>
+      <p>{{ cvData.objective }}</p>
     </section>
     <section class="bg-white p-4 mt-4 shadow-md">
       <h2 class="text-lg text-blue-600 font-semibold mb-4">Summary of Qualifications</h2>
-      <ul class="list-disc ml-4 text-sm">
+      <ul class="list-disc ml-4">
         {% for qualification in cvData.qualifications %}
           <li>{{ qualification }}</li>
         {% endfor %}
@@ -63,11 +64,19 @@
           <h3 class="text-xl">{{ job.title }}</h3>
           <p class="text-gray-600 italic">{{ job.company }} - {{ job.dates }}</p>
           <p>{{ job.description }}</p>
-          <ul class="list-disc ml-4 text-sm">
-            {% for responsibility in job.responsibilities %}
-              <li>{{ responsibility }}</li>
-            {% endfor %}
-          </ul>
+          {% if job.responsibilities %}
+            <ul class="list-disc ml-4">
+              {% for responsibility in job.responsibilities %}
+                <li>{{ responsibility }}</li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+          {% if job.usedTechnologies %}
+            <p>
+              <span>Used technologies:</span>
+              <span class="text-gray-600">{{ job.usedTechnologies | join(", ") }}</span>
+            </p>
+          {% endif %}
         </div>
       {% endfor %}
     </section>
