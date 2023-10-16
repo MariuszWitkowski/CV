@@ -41,6 +41,7 @@ module.exports = {
       company: 'GogoApps',
       location: 'Warsaw, Poland',
       dates: '11/2020-Present',
+      duration: '3 years',
       description:
         'Work in a full development multilingual teams as well as in solo projects. Outsourcing in various companies.',
       responsibilities: [
@@ -77,10 +78,103 @@ module.exports = {
       ],
     },
     {
+      title: 'FullStack Engineer',
+      company: 'Teacode.io',
+      location: 'Warsaw, Poland',
+      dates: '09/2020-10/2020',
+      duration: '2 months',
+      description:
+        'Developing full-stack mobile applications on a custom backend in Nodejs, with database records management in the ReactAdmin dashboard',
+      responsibilities: [
+        'Creating API in feathers.js',
+        'Developing greenfield React Native applications',
+        'Building a dashboard for database management in the React-admin',
+      ],
+      usedTechnologies: [
+        'TypeScript',
+        'React',
+        'ReactNative',
+        'ReactAdmin',
+        'Storybook',
+        'Feathers.js',
+        'Nodejs',
+        'Mongodb',
+      ],
+    },
+    {
+      title: 'Frontend Developer',
+      company: 'Straal',
+      location: 'Warsaw, Poland',
+      dates: '04/2019-09/2020',
+      duration: '1 year 6 months',
+      description:
+        'Collaboration in the frontend team with a UX/UI designer and backend developers.',
+      responsibilities: [
+        'Creating dashboard for managing users, transactions, subscriptions',
+        'Visualizing statistics on charts',
+        'Creating unit tests in TDD and e2e in Cypress',
+        'Conducting lectures and programming classes for students',
+      ],
+      usedTechnologies: [
+        'Vue',
+        'RxJs',
+        'TypeScript',
+        'Graphql',
+        'D3js',
+        'Cypress',
+        'Jest',
+        'NodeJS',
+        'Storybook',
+        'AWS',
+      ],
+    },
+    {
+      title: 'Senior Frontend Developer',
+      company: 'Grupa Wirtualna Polska',
+      location: 'Warsaw, Poland',
+      dates: '03/2016-03/2019',
+      duration: '3 years',
+      description:
+        'Developing E-mail interface on one of the most popular websites in Poland with cooperating with UX/UI designers and backend developers.',
+      responsibilities: [
+        'Developing E-mail interface on one of the most popular websites in Poland',
+        'Rewriting whole application from AngularJS to React',
+        'Building Help page for mail (TypeScript, Next.js, React, Node.js)',
+        'Developing Mail user profile (React, MobX)',
+        'Currently payment panel and the ability to purchase mail to pro version (React, MobX, Node.js)',
+        'Working in Agile, Scrum',
+      ],
+      usedTechnologies: [
+        'TypeScript',
+        'AngularJS',
+        'React',
+        'Sass',
+        'NextJS',
+        'NodeJS',
+        'Mobx',
+        'Storybook',
+        'BEM',
+      ],
+    },
+    {
+      title: 'Programmer',
+      company: 'Cadas Software',
+      location: 'Warsaw, Poland',
+      dates: '02/2014-02/2016',
+      duration: '2 years',
+      description:
+        'Developing application for creating surveys, managing dashboards and database',
+      responsibilities: [],
+      usedTechnologies: ['ExtJS', 'Java', 'Postgresql'],
+    },
+  ],
+  freelance: [
+    {
       title: 'Senior Frontend Developer',
       company: 'Esotiq',
       location: 'Warsaw, Poland',
       dates: '01/2023-present',
+      duration: '10 months',
       description: 'Creating a shopping cart application for a smart store',
       responsibilities: [
         'A shopping basket for a stationary store in the React and the Electron',
@@ -96,10 +190,11 @@ module.exports = {
       ],
     },
     {
-      title: 'Freelance',
+      title: 'Game developer',
       company: 'Side project',
       location: 'Warsaw, Poland',
       dates: '01/2023-03/2023',
+      duration: '2 months',
       description:
         'A domino game for learning musical notes in primary schools',
       usedTechnologies: [
@@ -116,6 +211,7 @@ module.exports = {
       company: 'Futbolkolektyw',
       location: 'Warsaw, Poland',
       dates: '09/2016-10/2021',
+      duration: '5 years',
       description:
         'Doing everything that was required from a junior to a team leader. A lot of experimenting with modern solutions.',
       responsibilities: [
@@ -144,6 +240,7 @@ module.exports = {
       company: 'Pick.Eat.Up',
       location: 'Warsaw, Poland',
       dates: '11/2020-06/2021',
+      duration: '8 months',
       description:
         'Creating an application that helps the environment and can prevent food waste',
       responsibilities: [
@@ -160,92 +257,6 @@ module.exports = {
         'Next.js',
         'Styled Components',
       ],
-    },
-    {
-      title: 'FullStack Engineer',
-      company: 'Teacode.io',
-      location: 'Warsaw, Poland',
-      dates: '09/2020-10/2020',
-      description:
-        'Developing full-stack mobile applications on a custom backend in Nodejs, with database records management in the ReactAdmin dashboard',
-      responsibilities: [
-        'Creating API in feathers.js',
-        'Developing greenfield React Native applications',
-        'Building a dashboard for database management in the React-admin',
-      ],
-      usedTechnologies: [
-        'TypeScript',
-        'React',
-        'ReactNative',
-        'ReactAdmin',
-        'Storybook',
-        'Feathers.js',
-        'Nodejs',
-        'Mongodb',
-      ],
-    },
-    {
-      title: 'Frontend Developer',
-      company: 'Straal',
-      location: 'Warsaw, Poland',
-      dates: '04/2019-09/2020',
-      description:
-        'Collaboration in the frontend team with a UX/UI designer and backend developers.',
-      responsibilities: [
-        'Creating dashboard for managing users, transactions, subscriptions',
-        'Visualizing statistics on charts',
-        'Creating unit tests in TDD and e2e in Cypress',
-        'Conducting lectures and programming classes for students',
-      ],
-      usedTechnologies: [
-        'Vue',
-        'RxJs',
-        'TypeScript',
-        'Graphql',
-        'D3js',
-        'Cypress',
-        'Jest',
-        'NodeJS',
-        'Storybook',
-        'AWS',
-      ],
-    },
-    {
-      title: 'Senior Frontend Developer',
-      company: 'Grupa Wirtualna Polska',
-      location: 'Warsaw, Poland',
-      dates: '03/2016-03/2019',
-      description:
-        'Developing E-mail interface on one of the most popular websites in Poland with cooperating with UX/UI designers and backend developers.',
-      responsibilities: [
-        'Developing E-mail interface on one of the most popular websites in Poland',
-        'Rewriting whole application from AngularJS to React',
-        'Building Help page for mail (TypeScript, Next.js, React, Node.js)',
-        'Developing Mail user profile (React, MobX)',
-        'Currently payment panel and the ability to purchase mail to pro version (React, MobX, Node.js)',
-        'Working in Agile, Scrum',
-      ],
-      usedTechnologies: [
-        'TypeScript',
-        'AngularJS',
-        'React',
-        'Sass',
-        'NextJS',
-        'NodeJS',
-        'Mobx',
-        'Storybook',
-        'BEM',
-      ],
-    },
-    {
-      title: 'Programmer',
-      company: 'Cadas Software',
-      location: 'Warsaw, Poland',
-      dates: '02/2014-02/2016',
-      description:
-        'Developing application for creating surveys, managing dashboards and database',
-      responsibilities: [],
-      usedTechnologies: ['ExtJS', 'Java', 'Postgresql'],
     },
   ],
   education: {
@@ -363,6 +374,7 @@ module.exports = {
         'Storybook',
         'RxJS',
         'ReactQuery',
+        'Zod',
         'Yarn',
         'Bun',
         'Deno',
