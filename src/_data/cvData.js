@@ -18,7 +18,7 @@ module.exports = {
     },
   ],
   objective:
-    'Senior frontend/fullstack developer with nine years of expertise in producing outstanding user interfaces and web apps. Devoted and accomplished. Looking to contribute to a dynamic team and lead the development of creative digital solutions by leveraging my knowledge of front-end technologies, excellent problem-solving skills, and leadership talents. committed to ensuring outstanding user experiences while being at the forefront of new web technologies.',
+    'Senior frontend/fullstack developer with over nine years of expertise in producing outstanding user interfaces and web apps. Devoted and accomplished. Looking to contribute to a dynamic team and lead the development of creative digital solutions by leveraging my knowledge of front-end technologies, excellent problem-solving skills, and leadership talents. committed to ensuring outstanding user experiences while being at the forefront of new web technologies.',
   explanation:
     'I wanted to create a minimalistic resume that is easy to read and navigate. I also wanted to make it easy to update and maintain. I used 11ty to generate the HTML from the data file. I used Github Pages to host the resume. I used Google Lighthouse to audit the resume. I used Google Mobile-Friendly Test to check if the resume is mobile-friendly.',
   qualifications: [
@@ -338,8 +338,9 @@ module.exports = {
         'Jest',
         'React Testing Library',
         'Cypress',
-        'Playwright',
+        'Mocha',
         'Puppeteer',
+        'Playwright',
       ],
     },
     {
@@ -353,7 +354,7 @@ module.exports = {
     { label: 'Cloud', values: ['AWS', 'Azure', 'Firebase', 'Vercel'] },
     {
       label: 'Databases',
-      values: ['MongoDB', 'PostgreSQL', 'Firebase', 'DynamoDB', 'SQLite'],
+      values: ['MongoDB', 'PostgreSQL', 'Firebase', 'SQLite', 'DynamoDB'],
     },
     {
       label: 'Management',

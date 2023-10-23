@@ -1,4 +1,4 @@
-<main class="flex flex-col p-4 mx-auto mt-8 text-sm text-gray-900 md:container md:flex-row">
+<main class="flex flex-col p-4 mx-auto mt-4 text-sm text-justify text-gray-900 md:container md:flex-row">
   <aside class="md:w-1/3">
     <section class="p-4 bg-white shadow-md">
       <h2 class="mb-2 text-lg font-semibold text-blue-600">Details</h2>
@@ -27,13 +27,13 @@
       <p>{{ cvData.education.degree }}, {{ cvData.education.fieldOfStudy }},
       {{ cvData.education.graduationDate }}</p>
     </section>
-    <section class="p-4 mt-4 bg-white shadow-md">
+    <section class="sticky top-0 p-4 mt-4 bg-white shadow-md">
       <h2 class="mb-4 text-lg font-semibold text-blue-600">Skills</h2>
       <ul>
         {% for skill in cvData.skills %}
           <li class="mt-2 first:mt-0">
             <div>{{ skill.label }}</div>
-            <div class="text-gray-600 ">{{ skill.values | join(", ") }}</div>
+            <div class="text-gray-600">{{ skill.values | join(", ") }}</div>
           </li>
         {% endfor %}
       </ul>
@@ -44,24 +44,25 @@
     <section class="p-4 bg-white shadow-md">
       <h2 class="mb-4 text-lg font-semibold text-blue-600">Objective</h2>
       <p>{{ cvData.objective }}</p>
+      <div class="pl-2 mt-2 text-xs italic text-gray-600 border-l-2 border-solid border-l-blue-500">{{ cvData.explanation }}</div>
     </section>
     <section class="p-4 mt-4 bg-white shadow-md">
       <h2 class="mb-4 text-lg font-semibold text-blue-600">Summary of Qualifications</h2>
       <ul class="ml-4 list-disc">
         {% for qualification in cvData.qualifications %}
-          <li>{{ qualification }}</li>
+          <li class="mb-2 leading-4 last:mb-0">{{ qualification }}</li>
         {% endfor %}
       </ul>
     </section>
     <section class="p-4 mt-4 bg-white shadow-md">
       <h2 class="mb-4 text-lg font-semibold text-blue-600">Professional Experience</h2>
       {% for job in cvData.experience %}
-        <div class="mb-4">
+        <div class="mb-4 last:mb-0">
           <h3 class="text-xl">{{ job.title }}</h3>
           <p class="italic text-gray-600">{{ job.company }} - {{ job.dates }} <span class="text-gray-500">({{ job.duration }})</span></p>
           <p>{{ job.description }}</p>
           {% if job.responsibilities %}
-            <ul class="ml-4 list-disc">
+            <ul class="my-1 ml-4 list-disc">
               {% for responsibility in job.responsibilities %}
                 <li>{{ responsibility }}</li>
               {% endfor %}
@@ -79,12 +80,12 @@
     <section class="p-4 mt-4 bg-white shadow-md">
       <h2 class="mb-4 text-lg font-semibold text-blue-600">Freelance Experience</h2>
       {% for job in cvData.freelance %}
-        <div class="mb-4">
+        <div class="mb-4 last:mb-0">
           <h3 class="text-xl">{{ job.title }}</h3>
           <p class="italic text-gray-600">{{ job.company }} - {{ job.dates }} <span class="text-gray-500">({{ job.duration }})</span></p>
           <p>{{ job.description }}</p>
           {% if job.responsibilities %}
-            <ul class="ml-4 list-disc">
+            <ul class="my-1 ml-4 list-disc">
               {% for responsibility in job.responsibilities %}
                 <li>{{ responsibility }}</li>
               {% endfor %}
