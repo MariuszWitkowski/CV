@@ -13,6 +13,10 @@ module.exports = {
       value: 'https://www.linkedin.com/in/mariusz-witkowski/',
     },
     {
+      field: 'X/Twitter',
+      value: 'https://twitter.com/mwitkowski91',
+    },
+    {
       field: 'Interactive CV page',
       value: 'https://mariuszwitkowski.github.io/CV',
     },
