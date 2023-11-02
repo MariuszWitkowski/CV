@@ -53,6 +53,9 @@ module.exports = {
         'Developing existing web and React Native applications',
         'Taking care of code quality by doing code reviews and creating tests',
         'Collaborated with UX/UI designers to create visually appealing',
+        'Implement PWA-specific features, like service workers, to enable offline functionality, push notifications, and background syncing.',
+        'Handle cross-browser compatibility issues.',
+        'Keep the PWA up to date with the latest web standards and best practices.',
         'CI/CD management',
       ],
       usedTechnologies: [
@@ -69,6 +72,7 @@ module.exports = {
         'Expo',
         'Node.js',
         'Nest.js',
+        'PWA',
         'Jest',
         'Storybook',
         'Cypress',
@@ -118,6 +122,7 @@ module.exports = {
         'Visualizing statistics on charts',
         'Creating unit tests in TDD and e2e in Cypress',
         'Conducting lectures and programming classes for students',
+        'Implement service workers and integrate with push notifications',
       ],
       usedTechnologies: [
         'Vue',
@@ -223,6 +228,7 @@ module.exports = {
         'Testing different solutions and methodologies to achieve the goal',
         'Dashboards for internal management, for closed users, as well as a panel with open registration',
         'Generator for scouts to create personalized player reports with the option of exporting to PDF',
+        'Using PWA features to enable offline functionality,  push notifications',
         'CI/CD management',
       ],
       usedTechnologies: [
@@ -232,6 +238,7 @@ module.exports = {
         'Next.js',
         'Node.js',
         'Express.js',
+        'PWA',
         'Storybook',
         'MongoDB',
         'Docker',
@@ -375,6 +382,7 @@ module.exports = {
     {
       label: 'Other',
       values: [
+        'PWA',
         'Docker',
         'Storybook',
         'RxJS',
