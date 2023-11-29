@@ -178,7 +178,7 @@ module.exports = {
     },
   ],
   freelance: [
-    {
+    /*{
       title: 'Senior Frontend Developer',
       company: 'Esotiq',
       location: 'Warsaw, Poland',
@@ -197,7 +197,7 @@ module.exports = {
         'ReactQuery',
         'Electron',
       ],
-    },
+    },*/
     {
       title: 'Game developer',
       company: 'Side project',
